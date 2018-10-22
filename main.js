@@ -50,6 +50,7 @@ function init() {
     );
     camera.position.set(5, 0, -150);
 
+    // render process
     var renderer = new THREE.WebGLRenderer({
         canvas: document.getElementById('webgl')
     });
@@ -68,6 +69,8 @@ function init() {
 
     return scene;
 }
+
+// functions
 
 function getSphere(radius, width, height, color) {
     var geometry = new THREE.SphereGeometry(radius, width, height);
@@ -123,5 +126,7 @@ function update(renderer, scene, camera, controls) {
         update(renderer, scene, camera, controls);
     });
 }
+
+// initialization
 
 var scene = init();
